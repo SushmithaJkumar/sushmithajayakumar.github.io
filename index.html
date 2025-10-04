@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sushmitha Jayakumar — Game Design Portfolio</title>
+  <meta name="description" content="Associate Game Designer focused on LiveOps and systems design. Portfolio of work across the WCC series." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0d1b2a; --card:#10243a; --muted:#e5e7eb; --text:#ffffff; --accent:#fca311; --accent-2:#64d3ff; --ring: rgba(252,163,17,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:var(--accent-2);text-decoration:none}
+    a:hover{opacity:.9}
+    .container{width:min(1100px,92%);margin-inline:auto}
+    header{position:sticky;top:0;z-index:40;background:linear-gradient(180deg, rgba(13,27,42,.98), rgba(13,27,42,.75));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .brand small{font-weight:600;opacity:.75}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 12px;border-radius:10px}
+    nav a:hover{background:rgba(255,255,255,.06)}
+    .hero{padding:80px 0 52px;background:radial-gradient(1200px 600px at 20% -10%, rgba(100,211,255,.25), transparent 55%), radial-gradient(900px 500px at 110% 0%, rgba(252,163,17,.18), transparent 50%)}
+    .hero h1{font-size:44px;line-height:1.08;margin:0 0 10px}
+    .hero p.lede{font-size:18px;max-width:780px;color:var(--muted);margin:0 0 22px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:var(--text);font-weight:600}
+    .btn.primary{background:var(--accent);color:#111;border-color:transparent}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px -12px var(--ring)}
+    section{padding:56px 0}
+    h2{font-size:28px;margin:0 0 18px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:860px){.grid.cols-2{grid-template-columns:1fr 1fr}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:12px;color:var(--muted)}
+    .kpis{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 0}
+    .kpi{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:8px 10px;font-size:12px;color:var(--muted)}
+    .list{margin:8px 0 0;padding-left:18px}
+    .project h3{margin:0 0 6px}
+    .project small{color:var(--muted)}
+    .achv-list{display:grid;gap:12px}
+    .achv{display:flex;gap:10px;align-items:flex-start;background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:14px}
+    .achv .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:7px;flex:0 0 auto}
+    .footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+    .muted{color:var(--muted)}
+    .split{display:grid;gap:18px}
+    @media(min-width:900px){.split{grid-template-columns:1.2fr .8fr}}
+    .input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)}
+    .row{display:grid;gap:12px}
+    @media(min-width:700px){.row.two{grid-template-columns:1fr 1fr}}
+    .tag-row{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+    .avatar{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#1f3b57,#0d1b2a);border:2px solid rgba(255,255,255,.12)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Sushmitha <small>Game Designer</small></div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container">
+      <div class="split">
+        <div>
+          <h1>Sushmitha Jayakumar</h1>
+          <p class="lede">Associate Game Designer focused on <strong>LiveOps</strong>, <strong>systems</strong>, and <strong>UX clarity</strong>. I design engaging loops, card economies, and progression systems — turning player insight and data into delightful experiences.</p>
+          <div class="tag-row" aria-label="Core strengths">
+            <span class="tag">LiveOps Ownership</span>
+            <span class="tag">Systems & Economy</span>
+            <span class="tag">Figma + GDD</span>
+            <span class="tag">Player Empathy</span>
+            <span class="tag">QA→Design</span>
+          </div>
+          <div class="cta" style="margin-top:18px">
+            <a class="btn primary" href="#projects">View My Work</a>
+            <a class="btn" href="#contact">Contact Me</a>
+            <a class="btn" href="https://drive.google.com/file/d/1_TPJBAOpKopplqVd02nLDqXisKENCUjZ/view?usp=sharing" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+        </div>
+        <aside class="card" aria-label="At a glance">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+            <div class="avatar"></div>
+            <div>
+              <div style="font-weight:700">Chennai, India</div>
+              <div class="muted">English • Tamil • Telugu • French</div>
+            </div>
+          </div>
+          <div class="badge">Currently @ Nextwave Multimedia</div>
+          <div class="kpis">
+            <div class="kpi">1+ yrs Design</div>
+            <div class="kpi">6 yrs QA</div>
+            <div class="kpi">WCC Series</div>
+          </div>
+          <p class="muted" style="margin-top:10px">Previously QA → now systems-focused designer crafting clear UX and balanced economies.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <p>Hi! I'm Sushmitha — a systems‑focused game designer with 1+ years in design and 6 years in QA. I currently contribute to the <em>World Cricket Championship</em> series at Nextwave Multimedia. I started in QA, building a sharp eye for player friction and polish. That foundation drives how I design today: clarity‑first, iteration‑driven, and always player‑focused.</p>
+          <p><strong>I specialize in:</strong></p>
+          <ul class="list">
+            <li>LiveOps systems (Bingo, Streak Missions)</li>
+            <li>Card economy & progression balancing</li>
+            <li>Dev‑ready documentation (GDDs, economy sheets, wireframes)</li>
+            <li>Cross‑team collaboration (Art, UI/UX, QA)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <p><strong>Core Competencies</strong></p>
+          <div class="tag-row" style="margin-top:6px">
+            <span class="tag">LiveOps Design</span>
+            <span class="tag">Feature Ownership</span>
+            <span class="tag">Card Economy Design</span>
+            <span class="tag">Player Retention Systems</span>
+            <span class="tag">UX Flows</span>
+            <span class="tag">Game Balance</span>
+            <span class="tag">Analytics Integration</span>
+          </div>
+          <p style="margin-top:12px"><strong>Tools</strong>: Figma, Draw.io, Unity (basic), Jira, Trello</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <div class="grid cols-2">
+        <!-- Project 1: Bingo LiveOps -->
+        <article class="card project" aria-labelledby="proj1">
+          <h3 id="proj1">Bingo LiveOps System</h3>
+          <small>Feature Owner — Figma, Draw.io, Jira — Ongoing</small>
+          <p>Structured and managed the Bingo Mission System, including streak‑based rewards, risk‑reward mechanics, and weekend Mystery Missions. Implemented data‑backed reward balancing and monetization hooks (RV doubling, Platinum entry). Integrated mission‑based unlocks with key game modes.</p>
+          <div class="kpis">
+            <div class="kpi">↑ RV engagement</div>
+            <div class="kpi">↑ Weekly completion</div>
+          </div>
+        </article>
+
+        <!-- Project 2: Deck Battle 11 (previously Card Attack Mode) -->
+        <article class="card project" aria-labelledby="proj2">
+          <h3 id="proj2">Deck Battle 11</h3>
+          <small>Feature Designer — Figma, Excel, Trello — 2024</small>
+          <p>Contributed to a tactical 11‑round card battle system with rarity tiers, duplicate conversion, and card upgrades. Improved onboarding and experience loops through system refinements; supported monetization variants (Unique Packs, RV cards).</p>
+          <div class="kpis">
+            <div class="kpi">↑ Pack conversion</div>
+            <div class="kpi">Balanced upgrades</div>
+          </div>
+        </article>
+
+        <!-- Project 3: Career Mode 2 -->
+        <article class="card project" aria-labelledby="proj3">
+          <h3 id="proj3">Career Mode 2</h3>
+          <small>Systems & Progression Designer — Figma, Jira — 2025</small>
+          <p>Forward‑only progression with seasonal tournaments, ranking systems, and AI difficulty scaling. Designed end‑of‑season reward logic, economy pacing, and tournament progression/entry specs.</p>
+          <div class="kpis">
+            <div class="kpi">↑ Time‑spent</div>
+            <div class="kpi">↑ 14‑day retention</div>
+          </div>
+        </article>
+
+        <!-- Project 4: Star Draft Challenge with generic impacts -->
+        <article class="card project" aria-labelledby="proj4">
+          <h3 id="proj4">Star Draft Challenge</h3>
+          <small>Mode Designer — Figma, Excel — Released July 2025</small>
+          <p>Launched a draft‑based strategy mode with strong adoption and sustained engagement. Balanced economy to support healthy premium‑currency spend vs. earn, and optimized the core loop to maintain high match completion.</p>
+          <ul class="list">
+            <li>Strong daily adoption with long average play sessions</li>
+            <li>High match completion indicating a sticky core loop</li>
+            <li>Contributed to session length gains and healthier revenue mix</li>
+          </ul>
+        </article>
+
+        <!-- Project 5: WCC 1 Feature Updates with generic impacts -->
+        <article class="card project" aria-labelledby="proj5">
+          <h3 id="proj5">WCC 1 — Feature Updates</h3>
+          <small>Systems Designer — 2025</small>
+          <p>Rolled out ad placement and economy updates that improved impressions per player and increased in‑game currency burn to support long‑term balance.</p>
+          <ul class="list">
+            <li>Significantly increased ad impressions per user</li>
+            <li>Improved currency sink leading to healthier economy</li>
+            <li>Supported smoother progression and engagement</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="container">
+      <h2>Achievements</h2>
+      <div class="achv-list">
+        <div class="achv"><div class="dot"></div><div>Promoted from QA Test Engineer to Associate Game Designer after consistently driving gameplay impact.</div></div>
+        <div class="achv"><div class="dot"></div><div>Designed and scaled Bingo LiveOps from concept to live service — improved RV engagement and weekly mission completion via streak‑based pacing.</div></div>
+        <div class="achv"><div class="dot"></div><div>Delivered 4+ monetized/gameplay systems across WCC 2 & WCC 3 (Star Draft, Deck Battle 11, Career Mode 2).</div></div>
+        <div class="achv"><div class="dot"></div><div>Developed player‑first card economy models using rarity distribution and upgrade pacing; contributed to improved pack conversion.</div></div>
+        <div class="achv"><div class="dot"></div><div>Defined analytics frameworks for major modes to enable data‑driven iteration and retention improvements.</div></div>
+        <div class="achv"><div class="dot"></div><div>Created 20+ GDDs, flowcharts, and wireframes (Figma/Draw.io) to align Design, UI, and Engineering.</div></div>
+        <div class="achv"><div class="dot"></div><div>Streamlined QA↔Design loops, reducing bug‑fix cycles through proactive tuning and early feedback.</div></div>
+        <div class="achv"><div class="dot"></div><div>Shipped features played by millions across the WCC franchise.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <p><strong>Let’s connect!</strong></p>
+          <p class="muted">Open to discussing design, systems, and LiveOps work.</p>
+          <p>Email: <a href="mailto:sushmithajayakumar96@gmail.com">sushmithajayakumar96@gmail.com</a><br>
+             LinkedIn: <a href="https://www.linkedin.com/in/sushmitha-jayakumar-91214a168" target="_blank" rel="noopener">linkedin.com/in/sushmitha‑jayakumar‑91214a168</a>
+          </p>
+          <a class="btn" href="https://drive.google.com/file/d/1_TPJBAOpKopplqVd02nLDqXisKENCUjZ/view?usp=sharing" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        </div>
+        <form class="card" onsubmit="event.preventDefault(); alert('Thanks! This is a static demo. Replace with your contact form service.');">
+          <div class="row two">
+            <input class="input" placeholder="Your name" required>
+            <input class="input" type="email" placeholder="Your email" required>
+          </div>
+          <div style="margin-top:10px">
+            <textarea class="input" rows="5" placeholder="Your message"></textarea>
+          </div>
+          <div style="margin-top:12px"><button class="btn primary" type="submit">Send Message</button></div>
+          <p class="muted" style="margin-top:8px;font-size:12px">Tip: When you deploy, connect this form to Formspree / Getform / Netlify Forms.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> Sushmitha Jayakumar · Built with care.</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{const target=document.querySelector(a.getAttribute('href')); if(target){e.preventDefault(); target.scrollIntoView({behavior:'smooth'});}})
+    })
+  </script>
+</body>
+</html>
